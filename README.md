@@ -1,4 +1,4 @@
-# MLOps GitHub Labs
+# MLops GitHub Labs
 
 ## Overview
 This repository contains 4 MLOps labs demonstrating CI/CD pipelines, model training, testing, and cloud deployment using GitHub Actions and Google Cloud Platform.
