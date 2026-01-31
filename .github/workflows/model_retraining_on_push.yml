@@ -1,0 +1,43 @@
+name: Lab2 Model Training
+
+on:
+  push:
+    paths:
+      - 'lab2/**'
+    branches:
+      - main
+
+jobs:
+  train-and-evaluate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r lab2/requirements.txt
+      
+      - name: Train model
+        run: |
+          cd lab2
+          python src/train_model.py
+      
+      - name: Evaluate model
+        run: |
+          cd lab2
+          python src/evaluate_model.py
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add lab2/models/ lab2/metrics/
+          git commit -m "Updated model and metrics" || echo "No changes"
+          git push
