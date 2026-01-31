@@ -3,15 +3,6 @@
 ## Overview
 This repository contains 4 MLOps labs demonstrating CI/CD pipelines, model training, testing, and cloud deployment using GitHub Actions and Google Cloud Platform.
 
-## Labs Completed
-
-| Lab | Topic | Description |
-|-----|-------|-------------|
-| Lab 1 | Python Testing | Pytest & Unittest with GitHub Actions |
-| Lab 2 | Model Training | Automated ML model training with GitHub Actions |
-| Lab 3 | GCP Storage | Train model and upload to Google Cloud Storage |
-| Lab 4 | CI/CD Pipeline | Complete CI/CD with Docker and Artifact Registry |
-
 ## Dataset & Model
 - **Dataset**: Iris (built into scikit-learn)
 - **Model**: Logistic Regression
