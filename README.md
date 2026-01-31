@@ -1,1 +1,1 @@
-# MLops_GIthub_Lab01
+# MLops_Github_Lab01
